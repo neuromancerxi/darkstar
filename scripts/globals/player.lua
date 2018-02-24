@@ -292,9 +292,22 @@ function CharCreate(player)
        player:levelCap(INITIAL_LEVEL_CAP)
     end
 
+    -- Container IDs
+    -- 2 = Storage (will be overwritten by game logic)
+    -- 4 = Locker
+    -- 8 = ??? (might be Mog Safe 2)
+    -- 9 = ??? (might be Mog Safe 2)
+
     if (START_INVENTORY > 30) then
-       player:changeContainerSize(0,(START_INVENTORY - 30))
-       player:changeContainerSize(5,(START_INVENTORY - 30))
+        player:changeContainerSize(0,(START_INVENTORY - 0))
+        player:changeContainerSize(1,(START_INVENTORY - 0))
+        player:changeContainerSize(3,(START_INVENTORY - 0))
+        player:changeContainerSize(4,(START_INVENTORY - 0))
+        player:changeContainerSize(5,(START_INVENTORY - 0))
+        player:changeContainerSize(6,(START_INVENTORY - 0))
+        player:changeContainerSize(7,(START_INVENTORY - 0))
+        player:changeContainerSize(8,(START_INVENTORY - 0))
+        player:changeContainerSize(9,(START_INVENTORY - 0))
     end
 
     if (UNLOCK_OUTPOST_WARPS >= 1) then
@@ -322,6 +335,39 @@ function CharCreate(player)
     -- ADD ADVENTURER COUPON
     player:addItem(0x218);
 
+    -- ADD PLAYER GEAR PERKS
+    player:addItem(0x2E23);
+    player:addItem(0x2835);
+    player:addItem(0x33A0);
+    player:addItem(0x6F5E);
+    player:addItem(0x6F5D);
+
+    -- ADD AF1 GEAR SLIPS
+
+    player:addKeyItem(FIGHTERS_ARMOR_CLAIM_SLIP);
+    player:addKeyItem(TEMPLE_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(HEALERS_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(WIZARDS_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(WARLOCKS_ARMOR_CLAIM_SLIP);
+    player:addKeyItem(ROGUES_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(GALLANT_ARMOR_CLAIM_SLIP);
+    player:addKeyItem(CHAOS_ARMOR_CLAIM_SLIP);
+    player:addKeyItem(BEAST_ARMOR_CLAIM_SLIP);
+    player:addKeyItem(CHORAL_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(HUNTERS_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(MYOCHIN_ARMOR_CLAIM_SLIP);
+    player:addKeyItem(NINJAS_GARB_CLAIM_SLIP);
+    player:addKeyItem(DRACHEN_ARMOR_CLAIM_SLIP);
+    player:addKeyItem(EVOKERS_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(MAGUS_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(CORSAIRS_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(PUPPETRY_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(DANCERS_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(SCHOLARS_ATTIRE_CLAIM_SLIP);
+    player:addKeyItem(AMIR_ARMOR_CLAIM_SLIP);
+    player:addKeyItem(PAHLUWAN_ARMOR_CLAIM_SLIP);
+    player:addKeyItem(YIGIT_ARMOR_CLAIM_SLIP);
+    
     --SET TITLE
     player:addTitle(NEW_ADVENTURER);
 
