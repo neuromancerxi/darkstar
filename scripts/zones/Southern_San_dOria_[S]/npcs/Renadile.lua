@@ -94,7 +94,7 @@ function onEventFinish(player,csid,option)
                   player:messageSpecial(ITEM_OBTAINED,StorageArray[option * 11 - Item]);
                end;
             end;
-            player:delKeyItem(StorageArray[option * 11]);
+            --player:delKeyItem(StorageArray[option * 11]);
             player:setGil(player:getGil() - StorageArray[option * 11 - 1]);
          else
             for Item = 2,6,1 do
