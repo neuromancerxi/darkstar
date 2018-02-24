@@ -173,9 +173,9 @@ function onEventFinish(player,csid,option)
         elseif (mJob == 12 or mJob == 13 or mJob == 14) then player:setPos(-220.084,-0.645,4.442,191,168); end
     elseif (csid == 93) then
         player:addTitle(STAR_BREAKER);
-        player:levelCap(75);
+        player:levelCap(99);
         player:setVar("maatDefeated",0);
-        player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_75);
+        player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_99);
         player:completeQuest(JEUNO,SHATTERING_STARS);
         player:addFame(JEUNO, 80);
     elseif (csid==74) then
